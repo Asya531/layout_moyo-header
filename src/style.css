@@ -1,4 +1,6 @@
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap';
+:root {
+  --blue-color: #00acdc;
+}
 
 html,
 body {
@@ -28,24 +30,27 @@ body {
 
 .navigation_link {
   display: inline-block;
+  padding: 0;
   text-decoration: none;
-  color: #000;
-  padding: 22.5px;
+  text-transform: uppercase;
 }
 
-.navigation_link[data-qa='hover']:hover {
-  color: #00acdc;
+.navigation_link:hover {
+  color: var(--blue-color);
 }
 
 .navigation_link.is-active {
-  color: #00acdc;
+  color: var(--blue-color);
 }
 
 .navigation_link.is-active::after {
   content: '';
+
   display: block;
+
   width: 100%;
   height: 4px;
-  background-color: #00acdc;
   margin-top: 5px;
+
+  background-color: var(--blue-color);
 }
